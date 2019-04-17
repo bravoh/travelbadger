@@ -8,5 +8,7 @@ class Booking extends Model
 {
     protected $guarded = [];
 
-
+    public function route(){
+        return $this->belongsTo(Route::class,"route_id");
+    }
 }

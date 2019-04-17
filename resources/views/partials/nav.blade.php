@@ -12,7 +12,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="index.html">
+                            <a class="navbar-brand" href="{{url("/")}}">
                                 <img src="img/badger.png" alt="Image Alternative text" title="Image Title"/>
                             </a>
                         </div>
