@@ -7,7 +7,7 @@
                 <div class="col-md-9 ">
                     <div class="theme-hero-text _mb-30">
                         <div class="theme-hero-text-header">
-                            <h2 class="theme-hero-text-title theme-hero-text-title-sm">205 Flights to Lodon</h2>
+{{--                            <h2 class="theme-hero-text-title theme-hero-text-title-sm">205 Flights to Lodon</h2>--}}
                         </div>
                     </div>
                 </div>
@@ -155,62 +155,7 @@
                         </div>
                         <div class="theme-search-results-sidebar">
                             <div class="theme-search-results-sidebar-sections _mb-20 _br-2 theme-search-results-sidebar-sections-white-wrap">
-                                <div class="theme-search-results-sidebar-section">
-                                    <h5 class="theme-search-results-sidebar-section-title">Stops</h5>
-                                    <div class="theme-search-results-sidebar-section-checkbox-list">
-                                        <div class="theme-search-results-sidebar-section-checkbox-list-items">
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">nonstop</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$431</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">1 stop</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$284</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">2 stops</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$351</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="theme-search-results-sidebar-section">
-                                    <h5 class="theme-search-results-sidebar-section-title">Flight Class</h5>
-                                    <div class="theme-search-results-sidebar-section-checkbox-list">
-                                        <div class="theme-search-results-sidebar-section-checkbox-list-items">
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">Economy</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$382</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">Business</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$421</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">First</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$149</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
                                 <div class="theme-search-results-sidebar-section">
                                     <h5 class="theme-search-results-sidebar-section-title">Price</h5>
                                     <div class="theme-search-results-sidebar-section-price">
@@ -218,278 +163,22 @@
                                     </div>
                                 </div>
                                 <div class="theme-search-results-sidebar-section">
-                                    <h5 class="theme-search-results-sidebar-section-title">Take-off London</h5>
+                                    <h5 class="theme-search-results-sidebar-section-title">Travel Company</h5>
                                     <div class="theme-search-results-sidebar-section-checkbox-list">
                                         <div class="theme-search-results-sidebar-section-checkbox-list-items">
+                                            @foreach($firms as $item)
                                             <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
                                                 <label class="icheck-label">
                                                     <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">Morning
-                              <span class="icheck-sub-title">05:00am - 11:59am</span>
-                            </span>
+                                                    <span class="icheck-title">{{$item->name}}</span>
                                                 </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$338</span>
+                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">
+                                                    @if($item->routes->avg("price"))
+                                                        FROM {{number_format($item->routes->avg("price"),2)}}
+                                                    @endif
+                                                </span>
                                             </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">Afternoon
-                              <span class="icheck-sub-title">12:00pm - 5:59pm</span>
-                            </span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$217</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">Evening
-                              <span class="icheck-sub-title">06:00pm - 11:59pm</span>
-                            </span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$421</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="theme-search-results-sidebar-section">
-                                    <h5 class="theme-search-results-sidebar-section-title">Landing New York</h5>
-                                    <div class="theme-search-results-sidebar-section-checkbox-list">
-                                        <div class="theme-search-results-sidebar-section-checkbox-list-items">
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">Morning
-                              <span class="icheck-sub-title">05:00am - 11:59am</span>
-                            </span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$372</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">Afternoon
-                              <span class="icheck-sub-title">12:00pm - 5:59pm</span>
-                            </span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$486</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">Evening
-                              <span class="icheck-sub-title">06:00pm - 11:59pm</span>
-                            </span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$349</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="theme-search-results-sidebar-section">
-                                    <h5 class="theme-search-results-sidebar-section-title">Take-off New York</h5>
-                                    <div class="theme-search-results-sidebar-section-checkbox-list">
-                                        <div class="theme-search-results-sidebar-section-checkbox-list-items">
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">Morning
-                              <span class="icheck-sub-title">05:00am - 11:59am</span>
-                            </span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$275</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">Afternoon
-                              <span class="icheck-sub-title">12:00pm - 5:59pm</span>
-                            </span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$308</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">Evening
-                              <span class="icheck-sub-title">06:00pm - 11:59pm</span>
-                            </span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$265</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="theme-search-results-sidebar-section">
-                                    <h5 class="theme-search-results-sidebar-section-title">Landing London</h5>
-                                    <div class="theme-search-results-sidebar-section-checkbox-list">
-                                        <div class="theme-search-results-sidebar-section-checkbox-list-items">
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">Morning
-                              <span class="icheck-sub-title">05:00am - 11:59am</span>
-                            </span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$471</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">Afternoon
-                              <span class="icheck-sub-title">12:00pm - 5:59pm</span>
-                            </span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$167</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">Evening
-                              <span class="icheck-sub-title">06:00pm - 11:59pm</span>
-                            </span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$231</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="theme-search-results-sidebar-section">
-                                    <h5 class="theme-search-results-sidebar-section-title">London Airport</h5>
-                                    <div class="theme-search-results-sidebar-section-checkbox-list">
-                                        <div class="theme-search-results-sidebar-section-checkbox-list-items">
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">CLY: City</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$441</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">LHR: Heathrow</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$492</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">LCW: Gatwich</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$342</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">STN: Stansed</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$407</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">SEN: Southend</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$233</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="theme-search-results-sidebar-section">
-                                    <h5 class="theme-search-results-sidebar-section-title">New York Airport</h5>
-                                    <div class="theme-search-results-sidebar-section-checkbox-list">
-                                        <div class="theme-search-results-sidebar-section-checkbox-list-items">
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">JFK: John F. Kennedy</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$443</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">LGA: LaGuardia</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$160</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">EWR: Newark Liberty</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$336</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="theme-search-results-sidebar-section">
-                                    <h5 class="theme-search-results-sidebar-section-title">Airlines</h5>
-                                    <div class="theme-search-results-sidebar-section-checkbox-list">
-                                        <div class="theme-search-results-sidebar-section-checkbox-list-items">
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">KLM Royal Dutch...</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$244</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">LOT Polish Airlines</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$313</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">Wow Airlines</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$241</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">Virgin Atlantic...</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$113</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">Delta Airlines</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$173</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">SWISS Airlines</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$489</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">Lufthansa</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$372</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">American Airlines</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$434</span>
-                                            </div>
-                                            <div class="checkbox theme-search-results-sidebar-section-checkbox-list-item">
-                                                <label class="icheck-label">
-                                                    <input class="icheck" type="checkbox"/>
-                                                    <span class="icheck-title">Fly Emirates</span>
-                                                </label>
-                                                <span class="theme-search-results-sidebar-section-checkbox-list-amount">$490</span>
-                                            </div>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>
@@ -522,7 +211,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">Airline Name
+                                <a href="#">Travel Company
                                     <span>Name &nbsp; A &rarr; Z</span>
                                 </a>
                             </li>
@@ -533,16 +222,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
                                 <li>
-                                    <a href="#">Departure take-off</a>
-                                </li>
-                                <li>
-                                    <a href="#">Departure landing</a>
-                                </li>
-                                <li>
-                                    <a href="#">Return take-off</a>
-                                </li>
-                                <li>
-                                    <a href="#">Return landing</a>
+                                    <a href="#">Pets Allowed</a>
                                 </li>
                             </ul>
                         </div>
@@ -579,11 +259,14 @@
                                                             <div class="row">
                                                                 <div class="col-md-3 ">
                                                                     <div class="theme-search-results-item-flight-section-meta">
-                                                                        <p class="theme-search-results-item-flight-section-meta-time">09:20
+                                                                        <p class="theme-search-results-item-flight-section-meta-time">
+                                                                            09:20
                                                                             <span>am</span>
                                                                         </p>
-                                                                        <p class="theme-search-results-item-flight-section-meta-city">{{$item->from_town->name}}</p>
-                                                                        <p class="theme-search-results-item-flight-section-meta-date">May 17, 2018</p>
+                                                                        <p class="theme-search-results-item-flight-section-meta-city">
+                                                                            {{$item->from_town->name}}
+                                                                        </p>
+                                                                        <p class="theme-search-results-item-flight-section-meta-date">April 19, 2019</p>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6 ">
@@ -595,22 +278,22 @@
                                                                         <div class="theme-search-results-item-flight-section-path-line-start">
                                                                             <i class="fa fa-plane theme-search-results-item-flight-section-path-icon"></i>
                                                                             <div class="theme-search-results-item-flight-section-path-line-dot"></div>
-                                                                            <div class="theme-search-results-item-flight-section-path-line-title">CLY</div>
+                                                                            <div class="theme-search-results-item-flight-section-path-line-title">{{strtoupper(substr($item->from_town->name,0,3))}}</div>
                                                                         </div>
-                                                                        <div class="theme-search-results-item-flight-section-path-line-middle-1">
-                                                                            <i class="fa fa-plane theme-search-results-item-flight-section-path-icon"></i>
-                                                                            <div class="theme-search-results-item-flight-section-path-line-dot"></div>
-                                                                            <div class="theme-search-results-item-flight-section-path-line-title">CDG</div>
-                                                                        </div>
-                                                                        <div class="theme-search-results-item-flight-section-path-line-middle-2">
-                                                                            <i class="fa fa-plane theme-search-results-item-flight-section-path-icon"></i>
-                                                                            <div class="theme-search-results-item-flight-section-path-line-dot"></div>
-                                                                            <div class="theme-search-results-item-flight-section-path-line-title">WAW</div>
-                                                                        </div>
+{{--                                                                        <div class="theme-search-results-item-flight-section-path-line-middle-1">--}}
+{{--                                                                            <i class="fa fa-plane theme-search-results-item-flight-section-path-icon"></i>--}}
+{{--                                                                            <div class="theme-search-results-item-flight-section-path-line-dot"></div>--}}
+{{--                                                                            <div class="theme-search-results-item-flight-section-path-line-title">CDG</div>--}}
+{{--                                                                        </div>--}}
+{{--                                                                        <div class="theme-search-results-item-flight-section-path-line-middle-2">--}}
+{{--                                                                            <i class="fa fa-plane theme-search-results-item-flight-section-path-icon"></i>--}}
+{{--                                                                            <div class="theme-search-results-item-flight-section-path-line-dot"></div>--}}
+{{--                                                                            <div class="theme-search-results-item-flight-section-path-line-title">WAW</div>--}}
+{{--                                                                        </div>--}}
                                                                         <div class="theme-search-results-item-flight-section-path-line-end">
                                                                             <i class="fa fa-plane theme-search-results-item-flight-section-path-icon"></i>
                                                                             <div class="theme-search-results-item-flight-section-path-line-dot"></div>
-                                                                            <div class="theme-search-results-item-flight-section-path-line-title">EWR</div>
+                                                                            <div class="theme-search-results-item-flight-section-path-line-title">{{strtoupper(substr($item->to_town->name,0,3))}}</div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
