@@ -36,5 +36,7 @@ class ApiController extends Controller
             "amount"=>$request->amount,
             "details"=>json_encode($request->payment_details)
         ]);
+
+        return $booking->id;
     }
 }

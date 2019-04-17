@@ -23,5 +23,6 @@ Route::get('/home', function () {
 
 Route::match(['get', 'post'],'routes','RouteController@index')->name('routes');
 Route::match(['get', 'post'],'booking/{id}','BookingController@index')->name('book');
+Route::match(['get', 'post'],'ticket/{id}','BookingController@ticket')->name('ticket');
 
 Route::match(['get', 'post'],'admin','AdminController@index')->middleware("auth")->name('admin');

@@ -9,16 +9,16 @@
                         @auth
 
                         @else
-                            <div class="theme-payment-page-sections-item">
-                                <div class="theme-payment-page-signin">
-                                    <i class="theme-payment-page-signin-icon fa fa-user-circle-o"></i>
-                                    <div class="theme-payment-page-signin-body">
-                                        <h4 class="theme-payment-page-signin-title">Sign in if you have an account</h4>
-                                        <p class="theme-payment-page-signin-subtitle">We will retrieve saved travelers and credit cards for faster checkout</p>
-                                    </div>
-                                    <a class="btn theme-payment-page-signin-btn btn-primary" href="#">Sign in</a>
-                                </div>
-                            </div>
+{{--                            <div class="theme-payment-page-sections-item">--}}
+{{--                                <div class="theme-payment-page-signin">--}}
+{{--                                    <i class="theme-payment-page-signin-icon fa fa-user-circle-o"></i>--}}
+{{--                                    <div class="theme-payment-page-signin-body">--}}
+{{--                                        <h4 class="theme-payment-page-signin-title">Sign in if you have an account</h4>--}}
+{{--                                        <p class="theme-payment-page-signin-subtitle">We will retrieve saved travelers and credit cards for faster checkout</p>--}}
+{{--                                    </div>--}}
+{{--                                    <a class="btn theme-payment-page-signin-btn btn-primary" href="#">Sign in</a>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                         @endauth
 
                         <div class="theme-payment-page-sections-item">
@@ -358,6 +358,8 @@
                                         </div>
                                     </div>
                                 </div>
+                                </br>
+                                <a class="btn _tt-uc btn-primary-inverse">+ another passenger</a>
                             </form>
                         </div>
                     </div>
@@ -438,7 +440,7 @@
             onApprove: function(data, actions) {
                 return actions.order.capture().then(function(details) {
                     // Show a success message to the buyer
-                    //alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
                     console.log(details);
 
                     $.ajax({
@@ -449,10 +451,10 @@
                             booking_details: $('#bookingForm').serialize(),
                             route_id: "{{$package->id}}",
                             amount: $(".amount").val()/100
+                        },success: function (res,data) {
+                            window.location.replace("{{url('ticket')}}"+"/"+res);
                         }
-                    }).done(function( msg ) {
-                        window.location.replace({{url('ticket/')}});
-                    });
+                    })
                 });
             }
 
