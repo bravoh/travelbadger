@@ -104,7 +104,7 @@
                                     <p class="theme-payment-page-booking-subtitle">
                                         Be at the pickup point at least 30 Minutes to departure time
                                     </p>
-                                    <p class="theme-payment-page-booking-price">{{$booking->route->price}} PAID</p>
+                                    <p class="theme-payment-page-booking-price">KES {{$booking->route->price}} PAID</p>
                                 </div>
                                 <a class="btn _tt-uc btn-primary-inverse btn-lg btn-block" href="#">Booking Successful</a>
                             </div>
