@@ -1,0 +1,21 @@
+<script src="{{url("js/jquery.js")}}"></script>
+<script src="{{url("js/moment.js")}}"></script>
+<script src="{{url("js/bootstrap.js")}}"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeBBmgAkyAN_QKjAVOiP_kWZ_eQdadeI&callback=initMap&libraries=places"></script>
+<script src="{{url("js/owl-carousel.js")}}"></script>
+<script src="{{url("js/blur-area.js")}}"></script>
+<script src="{{url("js/icheck.js")}}"></script>
+<script src="{{url("js/gmap.js")}}"></script>
+<script src="{{url("js/magnific-popup.js")}}"></script>
+<script src="{{url("js/ion-range-slider.js")}}"></script>
+<script src="{{url("js/sticky-kit.js")}}"></script>
+<script src="{{url("js/smooth-scroll.js")}}"></script>
+<script src="{{url("js/fotorama.js")}}"></script>
+<script src="{{url("js/bs-datepicker.js")}}"></script>
+<script src="{{url("js/typeahead.js")}}"></script>
+<script src="{{url("js/quantity-selector.js")}}"></script>
+<script src="{{url("js/countdown.js")}}"></script>
+<script src="{{url("js/window-scroll-action.js")}}"></script>
+<script src="{{url("js/fitvid.js")}}"></script>
+<script src="{{url("js/youtube-bg.js")}}"></script>
+<script src="{{url("js/custom.js")}}"></script>
