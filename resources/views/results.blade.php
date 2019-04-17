@@ -303,7 +303,7 @@
                                                                             <span>am</span>
                                                                         </p>
                                                                         <p class="theme-search-results-item-flight-section-meta-city">{{$item->to_town->name}}</p>
-                                                                        <p class="theme-search-results-item-flight-section-meta-date">May 18, 2018</p>
+                                                                        <p class="theme-search-results-item-flight-section-meta-date">April 19, 2019</p>
                                                                     </div>
                                                                 </div>
                                                             </div>

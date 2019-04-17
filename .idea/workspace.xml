@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2653219-636e-49f2-ad4a-4c088334bde8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RouteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RouteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/TravelFirm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TravelFirm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/results.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/results.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,8 +57,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/results.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="295" column="169" selection-start-line="295" selection-start-column="169" selection-end-line="295" selection-end-column="169" />
+            <state relative-caret-position="181">
+              <caret line="305" column="97" selection-start-line="305" selection-start-column="97" selection-end-line="305" selection-end-column="97" />
               <folding>
                 <element signature="e#42130#44348#0#HTML" />
               </folding>
@@ -313,18 +311,18 @@
       <option name="presentableId" value="Default" />
       <updated>1555423769909</updated>
       <workItem from="1555423771033" duration="34790000" />
-      <workItem from="1555507204884" duration="6913000" />
+      <workItem from="1555507204884" duration="7046000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41703000" />
+    <option name="totallyTimeSpent" value="41836000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="-4" width="1875" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2520503" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2520503" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -337,7 +335,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.33027524" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.33027524" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -646,8 +644,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/results.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="295" column="169" selection-start-line="295" selection-start-column="169" selection-end-line="295" selection-end-column="169" />
+        <state relative-caret-position="181">
+          <caret line="305" column="97" selection-start-line="305" selection-start-column="97" selection-end-line="305" selection-end-column="97" />
           <folding>
             <element signature="e#42130#44348#0#HTML" />
           </folding>
